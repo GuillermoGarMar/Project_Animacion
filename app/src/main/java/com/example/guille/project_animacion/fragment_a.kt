@@ -11,4 +11,27 @@ import android.view.ViewGroup
 class fragment_a : Fragment() {
 
 
+    companion object {
+        fun newInstance(): fragment_a {
+            var a = fragment_a()
+            var args = Bundle()
+            a.arguments = args
+            return a
+        }
+        var cont = 0
+
+        fun GiroEngA (){
+            cont++
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        return inflater!!.inflate(R.layout.fragment_a, container, false)
+    }
+
 }
